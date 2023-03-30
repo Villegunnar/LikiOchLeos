@@ -1,0 +1,41 @@
+.sidebar {
+    position: fixed;
+    top: 119px;
+    right: 47px;
+    bottom: 123px;
+    width: 250px;
+    background: var(--company-blue);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+    color: var(--company-white);
+    box-shadow: 17px 10px 10px rgba(0, 0, 0, .8);
+    border-radius: 6px;
+}
+
+.sidebar-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.fa-instagram {
+    font-size: 50px;
+    color: var(--company-orange);
+}
