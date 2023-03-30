@@ -1,0 +1,184 @@
+.navbar {
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    --bs-navbar-color: var(--company-blue)
+}
+
+.bg-company-blue {
+    background-color: var(--company-blue);
+
+}
+
+img {
+    height: 80px;
+    border-radius: 20%;
+}
+
+.navbar-brand-custom {
+    padding-left: 10%;
+    /* Flyttar logotypen till vänster kant */
+}
+
+/* .navbar-brand-custom img:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+} */
+
+/* Får loggan att vibbrera */
+
+/* Gör att loggan gungar */
+.navbar-brand-custom img:hover {
+    animation: swing 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(10deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(6deg);
+    }
+
+    70% {
+        transform: rotate(-6deg);
+    }
+
+    90% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* Gör att loggan gungar */
+
+
+
+.nav-item a {
+    position: relative;
+
+}
+
+
+.navbar-nav>li>a {
+    margin-top: 9px;
+    font-size: 20px;
+    color: var(--company-white);
+    margin-right: 70px;
+
+}
+
+.nav-link {
+    transition: all 0.3s ease-in-out;
+
+}
+.nav-link:hover {
+    color: var(--company-orange) !important;
+    transition: transform .5s ease, color .5s ease;
+}
+
+
+@media screen and (min-width: 768px) {
+    .nav-link:hover {
+
+        transform: scale(1.2);
+    }
+}
+@media screen and (max-width: 769px) {
+
+    .nav-link {
+        padding-left: 35px;
+
+    }
+
+    .nav-item img {
+        margin-left: 26px;
+    }
+
+    .nav-link:hover {
+        margin-right: 20px;
+        transform: translateX(10px);
+    }
+}
+
+
+/* HambugareMenyn */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(253, 149, 27, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    border-color: var(--company-orange);
+    text-align: center;
+}
+
+.navbar-toggler-text {
+    color: var(--company-orange);
+    vertical-align: middle;
+    padding-bottom: 6px;
+
+}
+.navbar-toggler:hover {
+    box-shadow: 0 0 10px var(--company-orange);
+  }
+
+/* HambugareMenyn */
+
+
+
+
+/* Småsaxar vid länkarna */
+.nav-item a img {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    bottom: 10px;
+    left: -25px;
+    /* opacity: 0%; */     /* <---- Kommentera ut denna för att få saxarna att gå från osynliga till synliga vid hover*/
+    transition: transform 1s ease;
+}
+
+.nav-item a:hover img {
+    opacity: 100%;
+    display: block;
+    /* visa bilden när du hovrar över nav-länken */
+    transform: rotate(-90deg);
+    /* Rotera bilden 90 grader vid hover-effekt */
+}
+/* Småsaxar vid länkarna */
