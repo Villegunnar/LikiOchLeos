@@ -20,3 +20,9 @@ body {
         display: none !important;
     }
 }
+
+@font-face {
+    font-family: 'LikiLeosFont'; /* Byt ut "DinFont" mot det namn du vill ge din font */
+    src: url('src/assets/Fonts/Roper-Serif.ttf') format('truetype'); /* Byt ut "din-fontfil.ttf" mot filnamnet och formatet för din font */
+    
+  }

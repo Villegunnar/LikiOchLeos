@@ -12,11 +12,20 @@
 
 img {
     height: 80px;
+    width: 135px;
     border-radius: 20%;
 }
 
+
+
+.logo-container{
+
+    padding-left: 20%;
+
+}
 .navbar-brand-custom {
-    padding-left: 10%;
+    /* padding-left: 20%; */
+
     /* Flyttar logotypen till vänster kant */
 }
 
@@ -52,7 +61,7 @@ img {
 
 /* Gör att loggan gungar */
 .navbar-brand-custom img:hover {
-    animation: swing 0.5s ease-in-out;
+    animation: swing 1s ease-in-out;
     transform-origin: center;
 }
 
@@ -62,11 +71,11 @@ img {
     }
 
     10% {
-        transform: rotate(10deg);
+        transform: rotate(15deg);
     }
 
     30% {
-        transform: rotate(-10deg);
+        transform: rotate(-15deg);
     }
 
     50% {
@@ -94,7 +103,11 @@ img {
 
 }
 
+.navbar-nav{
 
+margin-right: auto;
+margin-left: auto;
+}
 .navbar-nav>li>a {
     margin-top: 9px;
     font-size: 20px;
@@ -102,6 +115,9 @@ img {
     margin-right: 70px;
 
 }
+
+
+
 
 .nav-link {
     transition: all 0.3s ease-in-out;
@@ -114,37 +130,42 @@ img {
 
 
 @media screen and (min-width: 768px) {
+    /*Stort Läge*/
     .nav-link:hover {
-
         transform: scale(1.2);
     }
 }
 @media screen and (max-width: 769px) {
-
+    /*Litet Läge*/
+    .logo-container {
+        padding-left: 10%;
+    }
     .nav-link {
         padding-left: 35px;
-
     }
-
     .nav-item img {
-        margin-left: 26px;
+        margin-left: 26px; 
     }
-
     .nav-link:hover {
         margin-right: 20px;
         transform: translateX(10px);
     }
+    .text-top {
+        margin-left: 56px;
+  }
 }
 
 
 /* HambugareMenyn */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(253, 149, 27, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    
 }
 
 .navbar-toggler {
     border-color: var(--company-orange);
     text-align: center;
+    margin-right: 26px; 
 }
 
 .navbar-toggler-text {
@@ -182,3 +203,53 @@ img {
     /* Rotera bilden 90 grader vid hover-effekt */
 }
 /* Småsaxar vid länkarna */
+
+
+
+
+
+.logo-container {
+    position: relative; /* ange positionen som relativ för att positionera den absoluta texten */
+    display: flex;
+    align-items: center;
+    color: var(--company-white);
+
+  }
+
+  .logo-container img{
+    width: 95px;
+    height: 90px;
+
+  }
+  .text-top {
+    position: absolute; /* placera texten ovanpå bilden */
+    margin-left: 3px;
+    top: 59px;
+    /* left: 3px; */
+
+  
+
+    z-index: 1;
+    font-size: 8px;
+    font-weight: 297;
+    letter-spacing: 6px;
+  }
+  @media screen and (min-width: 768px) {
+
+}
+
+  .text-left {
+    z-index: 1;
+    margin-left: -110px;
+    font-family: 'LikiLeosFont';
+    font-size: 17px;
+    letter-spacing: 5px; /* Lägg till letter-spacing och justera värdet efter önskan */
+    }
+    
+    .text-right {
+        z-index: 1;
+    margin-left: 25px;
+    font-family: 'LikiLeosFont';
+    font-size: 17px;
+    letter-spacing: 5px; /* Lägg till letter-spacing och justera värdet efter önskan */
+    }
